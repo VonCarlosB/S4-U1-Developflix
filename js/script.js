@@ -18,15 +18,12 @@ function createFilm(film) {
     element.appendChild(title)
 
     if(film.genre_ids.indexOf(28) != -1){
-        console.log(film.title+' added to actionContainer')
         actionContainer.append(element.cloneNode(true))
     }
     if(film.genre_ids.indexOf(53) != -1){
-        console.log(film.title+' added to thrillerContainer')
         thrillerContainer.appendChild(element.cloneNode(true))
     }
     if(film.genre_ids.indexOf(12) != -1){
-        console.log(film.title+' added to adventureContainer')
         adventureContainer.appendChild(element.cloneNode(true))
     }
 }
