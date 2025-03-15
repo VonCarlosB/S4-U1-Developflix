@@ -15,4 +15,26 @@ h2 {
   margin-bottom: 10px;
 }
 
+.genero{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
 
+.film{
+  margin: 5px;
+  width: 120px;
+  color: black;
+  text-decoration: none;
+  cursor: default;
+}
+
+.film img{
+  width: 100%;
+}
+
+.film:hover{
+  border: 1px solid black;
+  width: 118px;
+  margin-bottom: 6px;
+}
