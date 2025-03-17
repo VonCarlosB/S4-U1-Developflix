@@ -1,10 +1,13 @@
 import peliculas from './peliculas.js'
-/*
+
+/* Variables DOM */
 const actionContainer = document.getElementById('genero-28')
 const thrillerContainer = document.getElementById('genero-53')
 const adventureContainer = document.getElementById('genero-12')
+/* Inicio URL imágenes */
 const imgURL = 'https://image.tmdb.org/t/p/w500'
 
+/*
 function createFilm(film) {
     let element = document.createElement('a')
     element.setAttribute('class', 'film')
@@ -33,26 +36,14 @@ peliculas.map((film) => createFilm(film))
 
 /* LIVE REVIEW */
 
-/* Variables DOM */
-const actionContainer = document.getElementById('genero-28')
-const thrillerContainer = document.getElementById('genero-53')
-const adventureContainer = document.getElementById('genero-12')
-/* Inicio URL imágenes */
-const imgURL = 'https://image.tmdb.org/t/p/w500'
 /* Filtrado de películas */
 const actionFilms = peliculas.filter((film) => film.genre_ids.includes(28))
 const thrillerFilms = peliculas.filter((film) => film.genre_ids.includes(53))
 const adventureFilms = peliculas.filter((film) => film.genre_ids.includes(12))
 
-actionFilms.forEach((film) => {
-    actionContainer.appendChild(createFilm(film))
-})
-thrillerFilms.forEach((film) => {
-    thrillerContainer.appendChild(createFilm(film))
-})
-adventureFilms.forEach((film) => {
-    adventureContainer.appendChild(createFilm(film))
-})
+actionFilms.forEach((film) => actionContainer.appendChild(createFilm(film)))
+thrillerFilms.forEach((film) => thrillerContainer.appendChild(createFilm(film)))
+adventureFilms.forEach((film) => adventureContainer.appendChild(createFilm(film)))
 
 function createFilm(film) {
     let element = document.createElement('a')
