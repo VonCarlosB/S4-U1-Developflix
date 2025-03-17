@@ -57,10 +57,10 @@ adventureFilms.forEach((film) => {
 function createFilm(film) {
     let element = document.createElement('a')
     element.setAttribute('class', 'film')
-    element.setAttribute('href', imgURL+film.backdrop_path)
+    element.setAttribute('href', `${imgURL}${film.backfrop_path}`)
     element.setAttribute('target', '_blank')
     let image = document.createElement('img')
-    image.setAttribute('src', imgURL+film.poster_path)
+    image.setAttribute('src', `${imgURL}${film.poster_path}`)
     element.appendChild(image)
     let title = document.createElement('h4')
     title.innerText = film.title
