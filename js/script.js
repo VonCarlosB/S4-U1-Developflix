@@ -40,7 +40,7 @@ peliculas.map((film) => createFilm(film))
 const actionFilms = peliculas.filter((film) => film.genre_ids.includes(28))
 const thrillerFilms = peliculas.filter((film) => film.genre_ids.includes(53))
 const adventureFilms = peliculas.filter((film) => film.genre_ids.includes(12))
-
+/*
 actionFilms.forEach((film) => actionContainer.appendChild(createFilm(film)))
 thrillerFilms.forEach((film) => thrillerContainer.appendChild(createFilm(film)))
 adventureFilms.forEach((film) => adventureContainer.appendChild(createFilm(film)))
@@ -57,4 +57,18 @@ function createFilm(film) {
     title.innerText = film.title
     element.appendChild(title)
     return element
+}*/
+
+/* innerHTML literalString */
+actionFilms.forEach((film) => actionContainer.innerHTML += createFilm(film))
+thrillerFilms.forEach((film) => thrillerContainer.innerHTML += createFilm(film))
+adventureFilms.forEach((film) => adventureContainer.innerHTML += createFilm(film))
+
+function createFilm(film) {
+    return `
+    <a class= "film" href= "${imgURL}${film.backfrop_path}">
+    <img src= "${imgURL}${film.poster_path}">
+    <h4>${film.title}</h4>
+    </a>
+    `
 }
