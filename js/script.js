@@ -7,6 +7,7 @@ const adventureContainer = document.getElementById('genero-12')
 /* Inicio URL imágenes */
 const imgURL = 'https://image.tmdb.org/t/p/w500'
 
+/* SOLUCIÓN 1 */
 /*
 function createFilm(film) {
     let element = document.createElement('a')
@@ -35,7 +36,7 @@ peliculas.map((film) => createFilm(film))
 */
 
 /* LIVE REVIEW */
-
+/* SOLUCIÓN 2 */
 /* Filtrado de películas */
 const actionFilms = peliculas.filter((film) => film.genre_ids.includes(28))
 const thrillerFilms = peliculas.filter((film) => film.genre_ids.includes(53))
@@ -59,7 +60,7 @@ function createFilm(film) {
     return element
 }*/
 
-/* innerHTML literalString */
+/* SOLUCIÓN 3: innerHTML literalString */
 actionFilms.forEach((film) => actionContainer.innerHTML += createFilm(film))
 thrillerFilms.forEach((film) => thrillerContainer.innerHTML += createFilm(film))
 adventureFilms.forEach((film) => adventureContainer.innerHTML += createFilm(film))
